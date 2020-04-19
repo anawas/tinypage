@@ -5,7 +5,7 @@ $instance_type = @file_get_contents("http://instance-data/latest/meta-data/insta
 $instance_id = @file_get_contents("http://instance-data/latest/meta-data/instance-id");
 
 echo "Running on host:  " . $hostname . "<br />";
-echo "Public dns name:  " . $public_name . "<br />"
+echo "Public dns name:  " . $public_name . "<br />";
 echo "Instance of type: " . $instance_type . "<br />";
 echo "Instance id:      " . $instance_id . "<br />";
 ?>
