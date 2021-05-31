@@ -1,0 +1,25 @@
+Wenn Sie mit der virtuellen Maschine verbunden sind, 
+geben Sie die folgenden Befehle _OHNE_ Hash ein.
+ -------------------------
+
+# Kommentar, diese Zeile nicht eingeben
+sudo apt update
+sudo apt upgrade
+
+# PHP installieren
+sudo apt install -y php
+
+# Apache Webserver installieren 
+sudo apt install -y apache2
+
+# Verzeichnis /var/www/html leeren
+sudo rm -rf /var/www/html/*
+
+# Den Code für die Webpage vom Repository holen 
+sudo git clone https://github.com/anawas/tinypage.git /tmp/tinypage
+
+# Für Azure
+sudo cp /tmp/tinypage/azure/index.php /var/www/html
+
+# Start Apache 
+sudo service apache2 start 
