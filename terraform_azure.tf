@@ -150,18 +150,18 @@ resource "azurerm_linux_virtual_machine" "myterraformvm" {
     location              = "eastus"
     resource_group_name   = azurerm_resource_group.myterraformgroup.name
     network_interface_ids = [azurerm_network_interface.myterraformnic.id]
-    size                  = "Standard_DS1_v2"
+    size                  = "Standard_B1ls"
 
     os_disk {
         name              = "myOsDisk"
         caching           = "ReadWrite"
-        storage_account_type = "Premium_LRS"
+        storage_account_type = "Standard_LRS"
     }
 
     source_image_reference {
-        publisher = "Canonical"
-        offer     = "UbuntuServer"
-        sku       = "18.04-LTS"
+        publisher = "canonical"
+        offer     = "0001-com-ubuntu-server-focal"
+        sku       = "20_04-lts-gen2"
         version   = "latest"
     }
 
@@ -171,7 +171,7 @@ resource "azurerm_linux_virtual_machine" "myterraformvm" {
 
     admin_ssh_key {
         username       = "azureuser"
-        public_key     = file("~/.ssh/id_rsa.pub")
+        public_key     = file("~/.ssh/azure_vm_key.pub")
     }
 
     boot_diagnostics {
