@@ -22,4 +22,4 @@ sudo git clone https://github.com/anawas/tinypage.git /tmp/tinypage
 sudo cp /tmp/tinypage/azure/index.php /var/www/html
 
 # Start Apache 
-sudo service apache2 start 
+sudo service apache2 start
