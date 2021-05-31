@@ -10,3 +10,6 @@ echo "Public dns name:  " . $public_name . "<br />";
 echo "Instance of type: " . $instance_type . "<br />";
 echo "Instance id:      " . $instance_id . "<br />";
 ?>
+
+
+
